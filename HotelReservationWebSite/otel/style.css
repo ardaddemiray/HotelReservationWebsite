@@ -1,0 +1,1205 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Header */
+
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(#517e86c4, #949fdf1a), url(Images/otel.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+nav{
+    display: flex;
+    padding: 2% 6%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav .logo{
+    text-decoration: none;
+    font-size: 24px;
+    color: #fff;
+    font-weight: bold;
+}
+
+.nav-sayfalar{
+    flex: 1;
+    text-align: right;
+}
+
+.nav-sayfalar ul li{
+    display: inline-block;
+    list-style: none;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.nav-sayfalar ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+}
+
+.nav-sayfalar ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: rgb(18, 218, 218);
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.nav-sayfalar ul li:hover::after{
+    width: 100%;
+}
+
+.slogan{
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.slogan h2{
+    font-size: 85px;
+    font-weight: 900;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.rezervasyon{
+    position: relative;
+    display: inline-block;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    padding: 12px 34px;
+    font-size: 13px;
+    text-decoration: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+.rezervasyon:hover{
+    border: 2px solid rgb(18, 218, 218);
+    background: rgb(18, 218, 218);
+    transition: 1s;
+}
+
+/* Anasayfa Odalarımız */
+
+.odalar {
+    width: 100%; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 0;
+    background-color: #f9f5f1; 
+}
+
+.odalar-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    align-items: center;
+}
+
+.odalar-yazi {
+    flex: 1;
+    padding: 20px;
+    text-align: left;
+}
+
+.odalar-yazi h1 {
+    font-size: 40px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.odalar-yazi p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.kesfet {
+    display: inline-block;
+    padding: 12px 30px;
+    background: #444;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.kesfet:hover {
+    background: rgb(18, 218, 218);
+    transition: 1s;
+}
+
+.odalar-resim{
+    flex: 1;
+    text-align: center;
+}
+
+.odalar-resim img {
+    width: 100%; 
+    border-radius: 10px;
+    margin-left: -20px;
+}
+
+/* Anasayfa Hizmetlerimiz */
+
+
+.hizmetlerimiz {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 0;
+    background-color: #f9f5f1; 
+}
+
+.hizmetler-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    align-items: center;
+}
+
+.hizmetler-resim {
+    flex: 1;
+    text-align: center;
+}
+
+.hizmetler-resim img {
+    width: 100%;
+    border-radius: 10px;
+    margin-right: -20px;
+}
+
+.hizmetler-yazi {
+    flex: 1;
+    padding: 20px;
+    text-align: left;
+    margin-left: 10px;
+}
+
+.hizmetler-yazi h1 {
+    font-size: 40px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.hizmetler-yazi p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+h1 i {
+    color: rgb(18, 218, 218); 
+    margin-right: 10px;
+}
+
+/* Hotel konum ve iletişim bilgileri */
+
+.neredeyiz {
+    background-color: white;
+    padding: 50px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.kart-container {
+    display: flex;
+    gap: 20px;
+    width: 90%;
+    max-width: 1200px;
+    align-items: stretch; 
+}
+
+.kart {
+    background: #fff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.neredeyiz-karti {
+    flex: 2;
+}
+
+.iletisim-karti {
+    flex: 1;
+}
+
+.kart h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+}
+
+.kart h2 i {
+    color: rgb(18, 218, 218);
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+.kart p {
+    font-size: 16px;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.btn-iletisim {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: #444;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.btn-iletisim:hover {
+    background: rgb(18, 218, 218);
+    transition: 1s;
+}
+
+.harita {
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+
+.footer{
+    padding: 40px 0;
+    background-color: rgb(18, 218, 218);
+}
+
+.footer .sosyal{
+    text-align: center;
+    padding-bottom: 25px;
+    color: #222;
+}
+
+.footer .sosyal a{
+    font-size: 24px;
+    color: white;
+    width: 40px;
+    height: 40px;
+    line-height: 38px;
+    border: 2px solid white;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    margin: 0 8px;
+}
+
+.footer .telif{
+    margin-top: 15px;
+    font-size: 13px;
+    text-align: center;
+    color: white;
+}
+
+/* Mini Header (Ortak) */
+
+.mini-header{
+    min-height: 50vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.6), rgba(4,9,30,0.6)), url(Images/hakkimizda.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    text-align: center;
+}
+
+.mini-header h1 {
+    margin-top: 100px;
+    font-size: 48px;
+    color: rgb(18, 218, 218);
+    position: relative;
+}
+
+.mini-header h1::after {
+    content: '';
+    display: block;
+    width: 200px;
+    height: 3px; 
+    background: rgb(18, 218, 218); 
+    margin: 10px auto 0; 
+}
+
+/* Hakkımızda */
+
+.hakkimizda {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 10%;
+    background-color: #f9f9f9;
+}
+
+.hakkimizda .satir {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.hakkimizda-baslik {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.hakkimizda-baslik h1 {
+    font-size: 36px;
+    font-weight: bold;
+    color: rgb(18, 218, 218);
+    margin-bottom: 20px;
+}
+
+.hakkimizda-baslik p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.hakkimizda-img {
+    flex: 1;
+    text-align: center;
+}
+
+.hakkimizda-img img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* İletişim */
+
+.iletisim {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    flex-direction: column; 
+    text-align: center;
+    padding: 50px 10%;
+    background-color: #f9f9f9; 
+    min-height: 80vh;
+    margin-top: -10px;
+}
+
+.iletisim .form-basligi h1 {
+    font-size: 36px;
+    color: rgb(18, 218, 218); 
+    margin-bottom: 10px;
+}
+
+.iletisim .form-basligi p {
+    font-size: 16px;
+    color: #555; 
+    margin-bottom: 30px;
+}
+
+/* İletişim form stilleri */
+
+.form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    text-align: left;
+    width: 100%; 
+    max-width: 500px;
+}
+
+.form span {
+    font-size: 16px;
+    color: #333; 
+    margin-bottom: 5px;
+}
+
+.form input,
+.form textarea {
+    width: 100%; 
+    padding: 12px 15px;
+    font-size: 14px;
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+    outline: none;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    transition: border-color 0.3s ease;
+}
+
+.form input:focus,
+.form textarea:focus {
+    border-color: rgb(18, 218, 218); 
+}
+
+textarea {
+    resize: none; 
+}
+
+button {
+    background-color: rgb(18, 218, 218);
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: rgb(14, 170, 170);
+}
+
+button i {
+    margin-left: 8px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; 
+    width: 100%;
+}
+
+/* Hizmetlerimiz */
+
+.ana-hizmetler{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 50px 0;
+    background-color: #f9f9f9;
+    color: fff;
+}
+
+.hizmet-sol, .hizmet-sag{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 20px 0;
+    width: 100%;
+    max-width: 1200px;
+    gap: 20px;
+    border-bottom: 2px solid rgb(18, 218, 218);
+    padding-bottom: 20px;
+}
+
+.hizmet-resim img{
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+}
+
+.hizmet-yazi {
+    flex: 1;
+    margin-left: 30px;
+}
+
+.hizmet-yazi h2 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: rgb(18, 218, 218);
+}
+
+.hizmet-yazi ul {
+    list-style: none;
+    padding: 0;
+}
+
+.hizmet-yazi ul li {
+    font-size: 16px;
+    margin-bottom: 10px;
+    line-height: 1.6;
+    color: #222;
+    position: relative;
+}
+
+.hizmet-yazi ul li::before {
+    content: '\2022';
+    color: rgb(18, 218, 218);
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+/* Odalarımız */
+
+.odalarimiz {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.oda-kart {
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgb(18, 218, 218);
+    overflow: hidden;
+    transition: all 0.3s ease;
+    text-align: center;
+    padding: 15px;
+}
+
+.oda-kart img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+}
+
+.oda-kart h3 {
+    font-size: 24px;
+    color: rgb(18, 218, 218);
+    margin: 10px 0;
+}
+
+.oda-kart p {
+    font-size: 16px;
+    color: #333;
+    margin: 10px 0;
+    line-height: 1.5;
+}
+
+.oda-rezervasyon {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background: rgb(18, 218, 218);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 1s;
+}
+
+.oda-rezervasyon:hover {
+    background: #d69b32;
+    color: #fff;
+}
+
+.baslik {
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    color: #d69b32; 
+    margin-bottom: 30px;
+    letter-spacing: 2px;
+}
+
+/* Giriş Yap & Kayıt Ol */
+
+.log-reg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: linear-gradient(rgba(4,9,30,0.5), rgba(4,9,30,0.5)), url(Images/otel.jpg);
+    background-size: cover;
+    padding: 40px 35px 55px;
+}
+
+.log-regkutu{
+    width: 500px;
+    background: rgba(255, 255, 255, .1);
+    border-radius: 10px;
+    color: #fff;
+    border: 2px solid rgba(255, 255, 255, .2);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+}
+
+.log-regkutu h1{
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.log-regkutu .giris-kutusu {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    gap: 15px; 
+    width: 100%; 
+}
+
+.giris-kutusu .giris-alani {
+    position: relative;
+    width: 80%;
+    height: 50px;
+    margin: 0; 
+}
+
+.giris-kutusu .giris-alani input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 6px;
+    outline: none;
+    font-size: 16px;
+    color: #fff;
+    padding: 10px 40px; 
+    box-sizing: border-box; 
+}
+
+
+.giris-kutusu .giris-alani input::placeholder {
+    color: #fff;
+}
+
+.giris-kutusu .giris-alani i {
+    position: absolute;
+    font-size: 20px;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    color: #fff;
+}
+
+.log-reg .log-regbtn {
+    width: 80%;
+    height: 45px;
+    background: rgb(18, 218, 218);
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 20px auto;
+}
+
+.uyeol-giris {
+    display: block;
+    text-align: center;
+    font-size: 14px;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.uyeol-giris a{
+    color: rgb(18, 218, 218);
+    text-decoration: none;
+}
+
+.uyeol-giris a:hover{
+    text-decoration: underline;
+}
+
+/* Admin Menü sayfası */
+
+.admin-panel{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: linear-gradient(rgba(4,9,30,0.5), rgba(4,9,30,0.5)), url(Images/adminpanel.jpg);
+    background-size: cover;
+    padding: 0;
+    margin: 0;
+}
+
+.admin {
+    width: 500px;
+    background: rgba(255, 255, 255, .1);
+    border-radius: 10px;
+    color: #fff;
+    border: 2px solid rgba(255, 255, 255, .2);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    margin: 0 auto;
+    text-align: center; 
+}
+
+.admin h1 {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.admin a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 45px;
+    background: rgb(18, 218, 218);
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 20px auto;
+    text-decoration: none;
+    color: #fff;
+    gap: 10px;
+}
+
+.admin a:hover{
+    background: #fff;
+    color: #222;
+    transition: 1s;
+}
+
+.admin i {
+    font-size: 18px;
+    color: #fff; 
+}
+
+.admin a:hover i{
+    color: rgb(18, 218, 218);
+}
+
+/* Admin yönetim tabloları */
+
+.tablo-ortala{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tablo-ortala h1{
+    color: rgb(18, 218, 218);
+    border-bottom: 2px solid rgb(18, 218, 218);
+}
+
+.tablo{
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 16px;
+    min-width: 400px;
+}
+
+.tablo thead tr {
+    background-color: rgb(18, 218, 218);
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+}
+
+.tablo th, .tablo td{
+    padding: 12px 15px;
+}
+
+.tablo tbody tr{
+    border: 1px solid rgb(18, 218, 218);
+}
+
+.tablo-ortala a{
+    background: rgb(18, 218, 218);
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 6px;
+    transition: 1s;
+}
+
+.tablo-ortala a:hover{
+    background: rgb(14, 170, 170);
+    color: #fff;
+}
+
+/* Kullanıcı Bilgileri */
+
+.kullanici-bilgi {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 20px;
+}
+.bilgi {
+    flex: 1;
+    min-width: 300px;
+    padding: 20px;
+    background: transparent;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(14, 170, 170, 1);
+    margin: 30px 0 30px 0;
+}
+.bilgi h1, .bilgi h2 {
+    text-align: center;
+    margin-bottom: 15px;
+    border-bottom: 2px solid rgb(18, 218, 218);
+}
+.bilgi table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+.bilgi table th, .bilgi table td {
+    padding: 8px;
+    text-align: center;
+    border: 1px solid rgb(18, 218, 218);
+}
+.bilgi form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.bilgi form input, .bilgi form button {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+.bilgi form input[type="password"] {
+    margin-top: 10px;
+}
+.bilgi form button {
+    background: #444;
+    color: #fff;
+    cursor: pointer;
+}
+.bilgi form button:hover {
+    background: rgb(18, 218, 218);
+    transition: 1s;
+}
+input[readonly] {
+    background-color: #e9ecef;
+    border: 1px solid #ced4da;
+    cursor: not-allowed;
+}
+
+.kullanici-icon {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.kullanici-icon i {
+    font-size: 80px;
+    color: rgb(18, 218, 218); 
+    background-color: #fff;
+    padding: 20px; 
+}
+
+.bilgi p{
+    text-align: center;
+}
+
+/* Rezervasyon */
+
+.rezervasyon-yap {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    padding: 20px;
+    background-color: white;
+}
+
+.hotel-hakkinda {
+    display: flex;
+    width: 80%;
+    max-width: 1200px;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(14, 170, 170, 1);
+    overflow: hidden;
+}
+
+.hotel-video {
+    flex: 1;
+    max-width: 40%;
+    overflow: hidden;
+    position: relative;
+}
+
+.video-background {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hotel-bilgi {
+    flex: 2;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hotel-bilgi h1 {
+    font-size: 24px;
+    color: rgb(18, 218, 218);
+    margin-bottom: 10px;
+}
+
+.hotel-bilgi .adres {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.hotel-bilgi .adres i {
+    margin-right: 8px;
+    color: rgb(18, 218, 218);
+}
+
+.hotel-iletisim p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #666;
+    display: flex;
+    align-items: center;
+}
+
+.hotel-iletisim i {
+    margin-right: 8px;
+    color: rgb(18, 218, 218);
+}
+
+.hotel-iletisim a {
+    color: #555;
+    text-decoration: none;
+}
+
+.hotel-iletisim a:hover {
+    text-decoration: underline;
+}
+
+.hotel-tanitim {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #444;
+    line-height: 1.5;
+}
+
+.otel-arama-container {
+    width: 100%;
+    padding: 20px;
+    background-color: white;
+}
+
+.otel-arama {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(14, 170, 170, 1);
+}
+
+.arama-bilgisi {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    flex: 1;
+}
+
+.arama-alani {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex: 1;
+    min-width: 150px;
+}
+
+.arama-alani i {
+    font-size: 20px;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.arama-alani span {
+    font-size: 14px;
+    color: #888;
+}
+
+.arama-alani input,
+.arama-alani select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid rgb(18, 218, 218);
+    border-radius: 5px;
+    font-size: 14px;
+    margin-top: 5px;
+    box-sizing: border-box;
+}
+
+.arama-butonlari {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-left: 10px;
+}
+
+.btn-ara,
+.btn-musaitlik {
+    padding: 10px 20px;
+    font-size: 14px;
+    color: #fff;
+    background: rgb(18, 218, 218);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-ara:hover,
+.btn-musaitlik:hover {
+    background: rgb(14, 170, 170);
+}
+
+.musait-odalar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    background-color: white;
+    padding: 20px;
+}
+
+.oda-kart {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(14, 170, 170, 1);
+}
+
+.oda-kart h3 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.oda-kart p {
+    font-size: 14px;
+    color: #666;
+    margin: 5px 0;
+}
+
+/* Müsaitlik tablosu */
+
+.musaitlik-tablosu {
+    width: 80%;
+    margin: 0 auto; 
+    border-collapse: collapse;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(14, 170, 170, 1);
+}
+
+.musaitlik-tablosu th {
+    background-color: rgb(18, 218, 218);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+.musaitlik-tablosu td {
+    text-align: center;
+    padding: 8px;
+    border: 1px solid #ddd;
+    font-size: 0.9em;
+}
+
+.musaitlik-tablosu .dolu-gun {
+    background-color: #f8d7da;
+    color: #721c24;
+    font-weight: bold;
+}
+
+.musaitlik-tablosu .musait-gun {
+    background-color: #d4edda;
+    color: #155724;
+    font-weight: bold;
+}
+
+.bilgilendirme-alani {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 30px;
+
+}
+
+.bilgilendirme-alani span {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.bilgi-musait i {
+    color: green;
+}
+
+.bilgi-dolu i {
+    color: red;
+}
+
+.bilgi-oda-sayisi i {
+    color: rgb(18, 218, 218);
+}
